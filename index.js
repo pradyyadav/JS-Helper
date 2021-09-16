@@ -1,14 +1,14 @@
 // 1. Ways to print in JavaScript
-// console.log("Hello World");
-// alert('me');
-// document.write("Hello World!");
+console.log("Hello World");
+alert('me');
+document.write("Hello World!");
 
 // 2. JavaScript Console API
-// console.log("World");
-// console.error("World");
-// console.warn("World");
+console.log("World");
+console.error("World");
+console.warn("World");
 
-// 3. JavaScript variables
+// // 3. JavaScript variables
 
 var number = 34;
 var number2 = 23;
@@ -63,19 +63,19 @@ ans = avg(3,4);
 // console.log(ans);
 
 
-// Dates
+// // Dates
 
-// myDate = new Date();
-// console.log(myDate);
-// console.log(myDate.getTime());
-// console.log(myDate.getDate());
-// console.log(myDate.getDay());
-// console.log(myDate.getFullYear());
-// console.log(myDate.getMinutes());
-// console.log(myDate.getHours());
+myDate = new Date();
+console.log(myDate);
+console.log(myDate.getTime());
+console.log(myDate.getDate());
+console.log(myDate.getDay());
+console.log(myDate.getFullYear());
+console.log(myDate.getMinutes());
+console.log(myDate.getHours());
 
 
-// DOM Manipulation
+// // DOM Manipulation
 
 let elem = document.getElementById('click');
 // console.log(elem);
@@ -88,11 +88,11 @@ elemClass[0].style.background = 'yellow';
 elemClass[0].classList.add('bg-primary');
 elemClass[0].classList.add('text-success');
 
-// console.log(elemClass[0].innerHTML);
-// console.log(elemClass[0].innerText);
+console.log(elemClass[0].innerHTML);
+console.log(elemClass[0].innerText);
 
 tn = document.getElementsByTagName('div');
-// console.log(tn);
+console.log(tn);
 
 tn[0].classList.add('artificial-p');
 createdElement = document.createElement('b');
@@ -112,11 +112,11 @@ selAll = document.querySelectorAll('.container');
 // console.log(sel);
 
 
-// Events in JavaScript
+// // Events in JavaScript
 
 function clicked()
 {
-    console.log('Button clicked')
+    console.log('Button clicked');
 }
 
 
@@ -124,32 +124,71 @@ function clicked()
 //     console.log('Loaded');
 // }
 
-// Events
+// // Events
 
 
 
-// infoContainer.addEventListener('click',function(){
-//     console.log('info clicked');
-// })
+infoContainer.addEventListener('click',function(){
+    console.log('info clicked');
+})
 
-// infoContainer.addEventListener('mouseover',function(){
-//     console.log('info breached');
-// })
+infoContainer.addEventListener('mouseover',function(){
+    console.log('info breached');
+})
 
-// infoContainer.addEventListener('mouseout',function(){
-//     console.log('info left');
-// })
-// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
-// infoContainer.addEventListener('mouseup',function(){
-//     document.querySelectorAll('.container')[1].innerHTML = prevHTML;
-//     console.log('mouse up')
-// })
+infoContainer.addEventListener('mouseout',function(){
+    console.log('info left');
+})
+let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+infoContainer.addEventListener('mouseup',function(){
+    document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+    console.log('mouse up')
+})
 
-// infoContainer.addEventListener('mousedown',function(){
-//     document.querySelectorAll('.container')[1].innerHTML = "<b>Clicked</b>";
-//     console.log('mouse down')
-// })
+infoContainer.addEventListener('mousedown',function(){
+    document.querySelectorAll('.container')[1].innerHTML = "<b>Clicked</b>";
+    console.log('mouse down')
+})
 
 
-// Set timeout and Set interval
 
+
+// // Arrow functions
+
+summ = (a,b) => {
+    return a+b;
+}
+
+// // setTimeout and setInterval
+
+logg = () => {
+    document.querySelectorAll('.container')[0].innerHTML = "<b> Logg Fired </b>";
+    console.log("Logged in");
+}
+
+clr1 setTimeout(logg,2000);
+clr2 = setInterval(logg,2000)
+
+// // use clearInterval/clearTimeout to clear setInterval/setTimeout
+
+
+// // JavaScript localStorage
+
+localStorage.setItem('name','prady');
+localStorage
+localStorage.getItem('name')
+localStorage.removeItem('name')
+localStorage.clear()
+
+// JSON
+
+obj = {name:"prady",age: 23, ob:{this: 'that is a str"ing'}}
+jso = JSON.stringify(obj);
+console.log(typeof jso)
+console.log(jso)
+
+
+// PARSE
+
+parsed = JSON.parse(`{"name":"prady","age":23,"ob":{"this":"that is a str\\"ing"}}`)
+console.log(parsed);
