@@ -27,7 +27,7 @@ var sur = 'yadav';
 var marks = {
     ravi: 34,
     shubhi: 23,
-    prady: 89
+    prady: 8
 }
 
 // console.log(marks['prady']);
